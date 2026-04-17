@@ -131,7 +131,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /_shop
 /_shopping_list
 /_widget
-/album/*/*?i=
 /analytics
 /api
 /api$
@@ -185,7 +184,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /layout/
 /likes
 /login
-/lookup?
 /mediaapi/
 /meetup_api
 /meetup_api$
@@ -201,13 +199,11 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /partials
 /pins
 /plugins
-/podcast/*/*?i=
 /print$
 /profile-about
 /raw
 /report_abuse
 /revisions
-/rss
 /rsvps/*atom
 /rsvps/*rss
 /rsvps/*xml
@@ -247,7 +243,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /tarball
 /tree
 /tried
-/tv-season/*/*?i=
 /unsubscribe/
 /video-
 /video_pins
@@ -450,11 +445,6 @@ Users
 View
 ViewDoc
 WebObjects
-WebObjects/MZFastFinance.woa
-WebObjects/MZFinance.woa
-WebObjects/MZPersonalizer.woa
-WebObjects/MZStore.woa/wa/viewMultiRoom?
-WebObjects/MZStoreElements.woa
 [_0-9a-zA-Z]+/likes
 [_0-9a-zA-Z]+/media
 [_0-9a-zA-Z]+/photo
@@ -1600,9 +1590,10 @@ hp/video
 hpc/*/supported-applications.aspx?
 hpm
 hpmob
-http://archive.org/robots.txt
+http://apps.apple.com/robots.txt
+http://bit.ly/robots.txt
 http://calendar.google.com/robots.txt
-http://linkedin.com/robots.txt
+http://cdc.gov/robots.txt
 http://npr.org/robots.txt
 hub?category=
 hz/contact-us/ajax/initiate-trusted-contact
@@ -2745,7 +2736,6 @@ static/images
 static/js
 static_map.php
 staticmap?
-station/idst.
 stations/force/force_localization.php?
 stats?gid=
 store
@@ -3473,7 +3463,7 @@ wiki/Wikipedia_Diskussion:Checkuser%2F
 wiki/Wikipedia_Diskussion:Spam-Blacklist-Log
 wiki/Wikipedia_talk%3AAbuse_reports
 wiki/Wikipedia_talk%3AAbuse_response
-wiki/Wikipedia_talk%3AAdministrator_electionshttp://policies.google.com/robots.txt
+wiki/Wikipedia_talk%3AAdministrator_electionshttp://drive.google.com/robots.txt
 wiki/Wikipedia_talk%3AAdministrator_recall
 wiki/Wikipedia_talk%3AAdministrator_review
 wiki/Wikipedia_talk%3AAdministrators%27_noticeboard
