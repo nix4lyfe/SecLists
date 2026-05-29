@@ -1695,9 +1695,9 @@ hp/video
 hpc/*/supported-applications.aspx?
 hpm
 hpmob
-http://ec.europa.eu/robots.txt
-http://ncbi.nlm.nih.gov/robots.txt
-http://s3.amazonaws.com/robots.txt
+http://cdn.jsdelivr.net/robots.txt
+http://developers.google.com/robots.txt
+http://npr.org/robots.txt
 http://web.archive.org/robots.txt
 hub?category=
 hz/contact-us/ajax/initiate-trusted-contact
@@ -1936,6 +1936,7 @@ maps/adsendpoint
 maps/api/js
 maps/api/place/js
 maps/api/staticmap
+maps/api/staticmap?
 maps/api/streetview
 maps/contrib
 maps/d
@@ -3281,7 +3282,7 @@ wiki/Wikipedia%3AVandalismi_in_corso
 wiki/Wikipedia%3AVandalismusmeldung
 wiki/Wikipedia%3AVandalismusmeldung%2F
 wiki/Wikipedia%3AVermittlungsausschuss
-wiki/Wikipedia%3AVermittlungsausschuss%2Fhttp://eventbrite.com/robots.txt
+wiki/Wikipedia%3AVermittlungsausschuss%2Fhttp://bbc.com/robots.txt
 wiki/Wikipedia%3AVotes_for_deletion
 wiki/Wikipedia%3AWikiProject_Deletion_sorting
 wiki/Wikipedia%3AWikiProject_Spam
