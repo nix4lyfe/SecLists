@@ -315,6 +315,7 @@ db/migrate/20180220000001_setting_attachment_preview.rb
 db/migrate/20190415000001_setting_es_multi_index.rb
 db/migrate/20191107181428_issue_2715_fix_broken_twitter_urls.rb
 db/migrate/20260623150000_ai_assistance_ticket_summary_selector.rb
+db/migrate/20260716000000_groups_add_parent_id_index.rb
 db/migrate/20250918105948_issue_5781_richtext_notes.rb
 db/migrate/20221116134211_issue_2185_and_or_conditions.rb
 db/migrate/20170822000001_agend_based_sender_issue_1351.rb
@@ -3496,6 +3497,7 @@ app/models/concerns/has_taskbars.rb
 app/models/concerns/can_selector.rb
 app/models/concerns/checks_core_workflow.rb
 app/models/concerns/checks_client_notification.rb
+app/models/concerns/has_recursive_cte_query.rb
 app/models/concerns/can_search.rb
 app/models/concerns/touches_perform_references.rb
 app/models/concerns/can_selector/advanced_sorting/base_select_field_sort.rb
@@ -4044,6 +4046,8 @@ app/frontend/apps/mobile/components/layout/LayoutHeader.vue
 app/frontend/apps/mobile/components/layout/LayoutCustomNavigation.vue
 app/frontend/apps/mobile/components/CommonTicketStateIndicator/__tests__/CommonTicketStateIndicator.spec.ts
 app/frontend/apps/mobile/components/CommonTicketStateIndicator/CommonTicketStateIndicator.vue
+app/frontend/apps/mobile/components/CommonInputSearch/CommonInputSearch.vue
+app/frontend/apps/mobile/components/CommonInputSearch/__tests__/CommonInputSearch.spec.ts
 app/frontend/apps/mobile/components/CommonButtonGroup/types.ts
 app/frontend/apps/mobile/components/CommonButtonGroup/CommonButtonGroup.vue
 app/frontend/apps/mobile/components/CommonButtonGroup/__tests__/CommonButtonGroup.spec.ts
@@ -6460,8 +6464,6 @@ app/frontend/shared/components/CommonDateTime/types.ts
 app/frontend/shared/components/CommonDateTime/index.ts
 app/frontend/shared/components/CommonDateTime/__tests__/CommonDateTime.spec.ts
 app/frontend/shared/components/CommonDateTime/CommonDateTime.vue
-app/frontend/shared/components/CommonInputSearch/CommonInputSearch.vue
-app/frontend/shared/components/CommonInputSearch/__tests__/CommonInputSearch.spec.ts
 app/frontend/shared/components/ObjectAttributes/types.ts
 app/frontend/shared/components/ObjectAttributes/useInlineEditable.ts
 app/frontend/shared/components/ObjectAttributes/useDisplayObjectAttributes.ts
@@ -6547,8 +6549,6 @@ app/frontend/shared/components/Form/fields/FieldCustomer/graphql/queries/autocom
 app/frontend/shared/components/Form/fields/FieldTreeSelect/types.ts
 app/frontend/shared/components/Form/fields/FieldTreeSelect/composables/useFlatSelectOptions.ts
 app/frontend/shared/components/Form/fields/FieldTreeSelect/composables/__tests__/useFlatSelectOptions.spec.ts
-app/frontend/shared/components/Form/fields/FieldSearch/FieldSearchInput.vue
-app/frontend/shared/components/Form/fields/FieldSearch/index.ts
 app/frontend/shared/components/Form/fields/FieldAutocomplete/types.ts
 app/frontend/shared/components/Form/fields/FieldExternalDataSource/types.ts
 app/frontend/shared/components/Form/fields/FieldExternalDataSource/graphql/queries/autocompleteSearchObjectAttributeExternalDataSource.graphql
@@ -6565,6 +6565,8 @@ app/frontend/shared/components/Form/fields/FieldRecipient/graphql/queries/autoco
 app/frontend/shared/components/Form/fields/FieldRecipient/graphql/queries/autocompleteSearch/recipient.graphql
 app/frontend/shared/components/Form/fields/FieldRecipient/graphql/queries/autocompleteSearch/recipient.mocks.ts
 app/frontend/shared/components/Form/fields/FieldRecipient/features/setAutoCompleteBehavior.ts
+app/frontend/shared/components/Form/fields/FieldRecipient/features/__tests__/filterValueValidators.spec.ts
+app/frontend/shared/components/Form/fields/FieldRecipient/features/filterValueValidators.ts
 app/frontend/shared/components/Form/fields/FieldGroupPermissions/types.ts
 app/frontend/shared/components/Form/fields/FieldEditor/extensions/HardBreakPlain.ts
 app/frontend/shared/components/Form/fields/FieldEditor/extensions/CharacterCount/types.ts
@@ -7432,7 +7434,6 @@ app/frontend/cypress/apps/mobile/components/Form/fields/FieldDate/date-visuals.c
 app/frontend/cypress/tsconfig.json
 app/frontend/cypress/shared/components/Form/FormGroup/form-group-visuals.cy.ts
 app/frontend/cypress/shared/components/Form/fields/FieldTreeSelect/treeselect-visuals.cy.ts
-app/frontend/cypress/shared/components/Form/fields/FieldSearch/search-visuals.cy.ts
 app/frontend/cypress/shared/components/Form/fields/FieldInput/input-visuals.cy.ts
 app/frontend/cypress/shared/components/Form/fields/FieldEditor/editor-mention-knowledge-base-exit-with-escape.cy.ts
 app/frontend/cypress/shared/components/Form/fields/FieldEditor/editor-mention-user.cy.ts
