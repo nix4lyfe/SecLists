@@ -17,9 +17,11 @@ contributing.md
 .changeset/fix-comments-path-parameter.md
 .changeset/fix-sdk-relational-filter-types.md
 .changeset/soft-lions-import.md
+.changeset/silent-melons-relate.md
 .changeset/fuzzy-lions-filter.md
 .changeset/tangy-parks-doubt.md
 .changeset/fix-error-response-schema.md
+.changeset/clean-bears-dream.md
 .changeset/websocket-validate-query.md
 .changeset/tus-mime-type-allow-list.md
 .changeset/ip-custom-header-warning-endpoints.md
@@ -28,13 +30,17 @@ contributing.md
 .changeset/nine-shoes-prove.md
 .changeset/chatty-papers-taste.md
 .changeset/proud-otters-wait.md
+.changeset/brave-otters-cheer.md
+.changeset/parse-deep-properties.md
 .changeset/clever-feet-ring.md
 .changeset/wild-pillows-cheer.md
 .changeset/cool-cookies-rest.md
 .changeset/little-ears-share.md
+.changeset/smooth-planes-wink.md
 .changeset/wide-mugs-wave.md
 .changeset/onboarding-dpa-replace-privacy.md
 .changeset/collect-boread-bobsled.md
+.changeset/large-rocks-admire.md
 .changeset/silent-versions-clean.md
 .changeset/clever-melons-shine.md
 .changeset/spotty-ghosts-serve.md
@@ -360,6 +366,7 @@ api/src/utils/validate-env.ts
 api/src/utils/get-allowed-log-levels.test.ts
 api/src/utils/split-fields.test.ts
 api/src/utils/get-host-from-req.ts
+api/src/utils/set-deep.ts
 api/src/utils/redact-object.test.ts
 api/src/utils/user-name.test.ts
 api/src/utils/get-default-value.ts
@@ -387,6 +394,7 @@ api/src/utils/store.test.ts
 api/src/utils/require-yaml.ts
 api/src/utils/get-collection-from-alias.test.ts
 api/src/utils/destroy-piped-stream.ts
+api/src/utils/set-deep.test.ts
 api/src/utils/validate-user-count-integrity.test.ts
 api/src/utils/is-url-allowed.ts
 api/src/utils/deep-freeze.ts
@@ -684,10 +692,10 @@ api/src/database/helpers/fn/dialects/mysql.test.ts
 api/src/database/helpers/fn/dialects/oracle.ts
 api/src/database/helpers/fn/dialects/postgres.test.ts
 api/src/database/helpers/fn/json/postgres-json-path.ts
-api/src/database/helpers/fn/json/mysql-json-path.test.ts
+api/src/database/helpers/fn/json/convert-json-path.test.ts
 api/src/database/helpers/fn/json/parse-function.test.ts
 api/src/database/helpers/fn/json/postgres-json-path.test.ts
-api/src/database/helpers/fn/json/mysql-json-path.ts
+api/src/database/helpers/fn/json/convert-json-path.ts
 api/src/database/helpers/fn/json/parse-function.ts
 api/src/database/helpers/date/types.ts
 api/src/database/helpers/date/index.ts
@@ -899,9 +907,11 @@ api/src/ai/chat/controllers/chat.post.ts
 api/src/ai/chat/controllers/chat.post.test.ts
 api/src/ai/chat/constants/system-prompt.ts
 api/src/ai/chat/lib/transform-file-parts.test.ts
+api/src/ai/chat/lib/ip-validated-download.test.ts
 api/src/ai/chat/lib/create-ui-stream.ts
 api/src/ai/chat/lib/create-ui-stream.test.ts
 api/src/ai/chat/lib/transform-file-parts.ts
+api/src/ai/chat/lib/ip-validated-download.ts
 api/src/ai/providers/anthropic-file-support.ts
 api/src/ai/providers/types.ts
 api/src/ai/providers/anthropic-tool-search.ts
@@ -2205,7 +2215,6 @@ app/src/utils/format-date.ts
 app/src/utils/should-show-comparison-diff.ts
 app/src/utils/get-minimal-grid-class.test.ts
 app/src/utils/get-groups.ts
-app/src/utils/parse-preset.ts
 app/src/utils/translate-literal.ts
 app/src/utils/upload-file.ts
 app/src/utils/get-default-values-from-fields.ts
@@ -2264,7 +2273,6 @@ app/src/utils/get-special-for-type.ts
 app/src/utils/get-version-display-name.test.ts
 app/src/utils/render-string-template.ts
 app/src/utils/timezones.ts
-app/src/utils/parse-preset.test.ts
 app/src/utils/get-local-type.ts
 app/src/utils/generate-favicon.test.ts
 app/src/utils/upload-files.test.ts
@@ -2806,6 +2814,7 @@ app/src/composables/use-permissions/lib/is-save-allowed.test.ts
 app/src/composables/use-permissions/lib/is-save-allowed.ts
 app/src/composables/use-permissions/lib/is-archive-allowed.test.ts
 app/src/composables/use-permissions/lib/is-archive-allowed.ts
+app/src/composables/use-relation-single.test.ts
 app/src/composables/use-visual-editing.ts
 app/src/composables/use-edits-guard.ts
 app/src/composables/use-relation-permissions.ts
